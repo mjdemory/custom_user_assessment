@@ -5,6 +5,7 @@ from myuser.models import MyUser
 
 # Register your models here.
 
+
 class CustomUserAdmin(UserAdmin):
     fieldsets = (
         *UserAdmin.fieldsets,
@@ -21,4 +22,4 @@ class CustomUserAdmin(UserAdmin):
     )
 
 
-admin.site.register(MyUser, UserAdmin)
+admin.site.register(MyUser, CustomUserAdmin)
